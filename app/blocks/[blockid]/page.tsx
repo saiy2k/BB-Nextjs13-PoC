@@ -2,10 +2,8 @@ import Link from 'next/link';
 import styles from './page.module.css'
 
 export default async function BlockDetail({
-  children,
   params
 }: {
-  children: React.ReactNode,
   params: any,
 
 }) {
@@ -25,6 +23,7 @@ export default async function BlockDetail({
       { txns.map((txn: any) => (
         <p> { txn.txid } </p>
       )) }
+
     </div>
   )
 
