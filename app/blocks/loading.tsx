@@ -1,8 +1,5 @@
-import Link from 'next/link';
-import styles from './page.module.css'
 
-export default function Blocks() {
-
+export default function Loading() {
   return (
     <div style={{
       height: '60vh',
@@ -10,9 +7,6 @@ export default function Blocks() {
       flexDirection: 'column',
       justifyContent: 'space-around',
       alignItems: 'center'
-    }}>
-      Select a transaction to see detail
-    </div>
+    }}> Loading blocks... </div>
   )
-
 }

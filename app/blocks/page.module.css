@@ -1,0 +1,46 @@
+.container {
+  padding: 0 8rem;
+}
+
+.main {
+  margin: 2rem 0;
+  border-radius: 8px;
+  background: #1D2127;
+  box-shadow: 0 20px 32px 0 rgb(0 0 0 / 8%);
+  padding: 0px;
+}
+
+.title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  color: white;
+  flex: 1 auto;
+}
+
+.tableRow {
+  padding: 20px 30px;
+  border-bottom: 1px #2d2f39 solid;
+}
+
+.tableHeader > div:nth-child(1), .tableRow > div:nth-child(1) {
+  width: 100px;
+}
+.tableHeader > div:nth-child(2), .tableRow > div:nth-child(2) {
+  width: 200px;
+}
+
+.cell {
+  display: inline-block;
+}
+
+
