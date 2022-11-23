@@ -3,8 +3,8 @@
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 70vh;
+  padding: 0rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -35,28 +35,7 @@
   font-style: normal;
   font-weight: 800;
   letter-spacing: -0.025em;
-}
-
-.title a {
-  text-decoration: none;
-  color: #0070f3;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+  margin-bottom: 64px;
 }
 
 .code {
@@ -91,8 +70,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: red;
+  border-color: red;
 }
 
 .card h2 {
@@ -107,8 +86,8 @@
 }
 
 .logo {
-  height: 1em;
   margin-left: 0.5rem;
+  color: red;
 }
 
 @media (max-width: 600px) {
