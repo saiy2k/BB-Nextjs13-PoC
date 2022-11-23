@@ -33,7 +33,7 @@ export default async function Blocks({
               <div key={block.id} className={styles.tableRow}>
 
                 <div className={styles.cell}>
-                  <Link href={`blocks/${block.height.toString()}`} style={{ color: 'red' }}>
+                  <Link href={`blocks/${block.id.toString()}`} style={{ color: 'red' }}>
                     { block.height }
                   </Link>
                 </div>
@@ -111,25 +111,3 @@ async function getData() {
   return res.json();
 }
 
-  /*
-export default async function Blocks({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-
-  return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Latest Blocks
-        </h1>
-        {children}
-
-      </main>
-
-    </div>
-  )
-}
-
-   */
