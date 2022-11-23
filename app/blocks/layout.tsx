@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import styles from './page.module.css'
+
+import BlockRow from './blockrow';
+import styles from './page.module.css';
 
 export default async function Blocks({
   children,
@@ -29,20 +31,8 @@ export default async function Blocks({
 
             </div>
 
-            { blocks.map((block: any) => (
-              <div key={block.id} className={styles.tableRow}>
-
-                <div className={styles.cell}>
-                  <Link href={`blocks/${block.id.toString()}`} style={{ color: 'red' }}>
-                    { block.height }
-                  </Link>
-                </div>
-
-                <div className={styles.cell}>
-                  { new Date(block.timestamp * 1000).toLocaleString() }
-                </div>
-
-              </div>
+            { blocks.map((block: any, index: number) => (
+              <BlockRow key={block.id} block={block} index={index} />
             )) }
           </div>
 
