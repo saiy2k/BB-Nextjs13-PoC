@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import styles from './page.module.css'
+
+import BlockRow from './blockrow';
+import styles from './page.module.css';
 
 export default async function Blocks({
   children,
@@ -16,7 +18,7 @@ export default async function Blocks({
           Latest Blocks
         </h1>
         <div className={styles.content}>
-          <div className={styles.table}>
+          <div className={styles.table1}>
             <div className={styles.tableRow} style={{ color: '#78838e'}}>
 
               <div className={styles.cell}>
@@ -29,24 +31,12 @@ export default async function Blocks({
 
             </div>
 
-            { blocks.map((block: any) => (
-              <div key={block.id} className={styles.tableRow}>
-
-                <div className={styles.cell}>
-                  <Link href={`blocks/${block.height.toString()}`} style={{ color: 'red' }}>
-                    { block.height }
-                  </Link>
-                </div>
-
-                <div className={styles.cell}>
-                  { new Date(block.timestamp * 1000).toLocaleString() }
-                </div>
-
-              </div>
+            { blocks.map((block: any, index: number) => (
+              <BlockRow key={block.id} block={block} index={index} />
             )) }
           </div>
 
-          <div className={styles.table} style={{ textAlign: 'center' }}>
+          <div className={styles.table2} style={{ textAlign: 'center' }}>
             { children }
           </div>
 
@@ -111,25 +101,3 @@ async function getData() {
   return res.json();
 }
 
-  /*
-export default async function Blocks({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-
-  return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Latest Blocks
-        </h1>
-        {children}
-
-      </main>
-
-    </div>
-  )
-}
-
-   */

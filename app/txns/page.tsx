@@ -1,6 +1,10 @@
+import styles from './page.module.css'
+
 export default function Txns() {
   return (
-    <h1>Transaction</h1>
+    <div className={styles.container}>
+      <h1>Transaction - Under construction</h1>
+    </div>
   );
 }
  
