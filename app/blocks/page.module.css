@@ -17,15 +17,25 @@
   padding: 2rem;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .table {
   color: white;
 }
 
-.tableHeader > div:nth-child(1) {
-  width: 150px;
+.tableRow {
+  padding: 20px 30px;
+  border-bottom: 1px #2d2f39 solid;
 }
-.tableHeader > div:nth-child(2) {
-  width: 350px;
+
+.tableHeader > div:nth-child(1), .tableRow > div:nth-child(1) {
+  width: 100px;
+}
+.tableHeader > div:nth-child(2), .tableRow > div:nth-child(2) {
+  width: 200px;
 }
 
 .cell {
