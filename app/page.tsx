@@ -23,15 +23,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <Link href="/">
-          Powered by{' '}
-          <span className={styles.logo}>
-            Bull Bitcoin
-          </span>
-        </Link>
-      </footer>
     </div>
   )
 }

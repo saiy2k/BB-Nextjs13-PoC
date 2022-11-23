@@ -1,5 +1,6 @@
-import './globals.css'
+import Link from 'next/link';
 import Header from './header'
+import './globals.css'
 
 export default function RootLayout({
   children,
@@ -17,6 +18,15 @@ export default function RootLayout({
         <Header />
 
         {children}
+
+        <footer className='footer'>
+          <Link href="/">
+            Powered by{' '}
+            <span className='logo'>
+              Bull Bitcoin
+            </span>
+          </Link>
+        </footer>
       </body>
     </html>
   )

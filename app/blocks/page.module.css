@@ -1,0 +1,35 @@
+.container {
+  padding: 0 8rem;
+}
+
+.main {
+  margin: 2rem 0;
+  border-radius: 8px;
+  background: #1D2127;
+  box-shadow: 0 20px 32px 0 rgb(0 0 0 / 8%);
+  padding: 0px;
+}
+
+.title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 2rem;
+}
+
+.table {
+  color: white;
+}
+
+.tableHeader > div:nth-child(1) {
+  width: 150px;
+}
+.tableHeader > div:nth-child(2) {
+  width: 350px;
+}
+
+.cell {
+  display: inline-block;
+}
+
+
