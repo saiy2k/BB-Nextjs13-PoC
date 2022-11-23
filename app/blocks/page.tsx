@@ -24,7 +24,7 @@ export default async function Blocks() {
           <div key={block.id} className={styles.tableRow}>
 
             <div className={styles.cell}>
-              <Link href={`blocks/${block.height.toString()}`}>
+              <Link href={`blocks/${block.height.toString()}`} style={{ color: 'red' }}>
                 { block.height }
               </Link>
             </div>
@@ -38,31 +38,9 @@ export default async function Blocks() {
       </div>
 
       <div className={styles.table}>
-        <div className={styles.tableRow} style={{ color: '#78838e'}}>
 
-          <div className={styles.cell}>
-            Height
-          </div>
-
-          <div className={styles.cell}>
-            Timestamp
-          </div>
-
-        </div>
-
-        { blocks.map((block: any) => (
-          <div key={block.id} className={styles.tableRow}>
-
-            <div className={styles.cell}>
-              { block.height }
-            </div>
-
-            <div className={styles.cell}>
-              { block.timestamp }
-            </div>
-
-          </div>
-        )) }
+        Select a transaction to see it's blocks
+        
       </div>
 
     </div>

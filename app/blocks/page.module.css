@@ -24,6 +24,7 @@
 
 .table {
   color: white;
+  flex: '1 auto';
 }
 
 .tableRow {
