@@ -36,7 +36,7 @@ export default async function Blocks({
             )) }
           </div>
 
-          <div className={styles.table2} style={{ textAlign: 'center' }}>
+          <div className={styles.table2} style={{ textAlign: 'center', marginTop: '48px' }}>
             { children }
           </div>
 
@@ -47,49 +47,6 @@ export default async function Blocks({
     </div>
   )
 
-  /*
-  return (
-    <div className={styles.content}>
-      <div className={styles.table}>
-        <div className={styles.tableRow} style={{ color: '#78838e'}}>
-
-          <div className={styles.cell}>
-            Height
-          </div>
-
-          <div className={styles.cell}>
-            Timestamp
-          </div>
-
-        </div>
-
-        { blocks.map((block: any) => (
-          <div key={block.id} className={styles.tableRow}>
-
-            <div className={styles.cell}>
-              <Link href={`blocks/${block.height.toString()}`} style={{ color: 'red' }}>
-                { block.height }
-              </Link>
-            </div>
-
-            <div className={styles.cell}>
-              { new Date(block.timestamp * 1000).toLocaleString() }
-            </div>
-
-          </div>
-        )) }
-      </div>
-
-      <div className={styles.table}>
-
-        { children }
-        
-      </div>
-
-    </div>
-
-  )
-   */
 }
 
 async function getData() {
