@@ -4,10 +4,10 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function BlockRow({
-  block, index
+export default function TxRow({
+  tx, index
 }: {
-  block: any, index: number
+  tx: any, index: number
 }) {
 
   const [expand, setExpand] = useState(false);
@@ -21,22 +21,18 @@ export default function BlockRow({
       <div className={styles.tableRow}>
 
         <div className={styles.cell}>
-          <Link href={`blocks/${block.id.toString()}`} style={{ color: 'red' }}>
-            { block.height }
+          <Link href={`/txns`} style={{ color: 'red' }}>
+            { tx.txid.substring(0, 30) }...
           </Link>
         </div>
 
         <div className={styles.cell}>
-          { new Date(block.timestamp * 1000).toLocaleString() }
-        </div>
-
-        <div className={[styles.cell, styles.button].join(' ')} onClick={(e) => toggleDetail()}>
-          { expand ? 'collapse' : 'expand' }
+          { tx.vout.reduce((acc: number, curr: any) => acc + curr.value, 0)  } sats
         </div>
 
       </div>
 
-      {expand ?
+      { /* expand ?
       <table className={styles.tableRow} style={{ 'width': '100%', 'background': '#111316', 'border': '1px solid #2d2f39', 'borderTop': 'none', marginTop: '-15px' }}>
         <tr>
           <td> Height </td>
@@ -68,7 +64,7 @@ export default function BlockRow({
           <td> { block.nonce } </td>
         </tr>
 
-      </table>: null }
+      </table>: null */ }
     </>
   );
 
