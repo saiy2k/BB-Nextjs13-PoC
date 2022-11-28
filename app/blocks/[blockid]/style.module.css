@@ -1,0 +1,11 @@
+
+.tableRow {
+  padding: 10px 0px;
+  border-bottom: 1px #2d2f39 solid;
+}
+
+.cell {
+  display: inline-block;
+}
+
+

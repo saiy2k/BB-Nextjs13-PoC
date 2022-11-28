@@ -7,6 +7,6 @@ export default function Loading() {
       flexDirection: 'column',
       justifyContent: 'space-around',
       alignItems: 'center'
-    }}> Loading block Txns... </div>
+    }}> Loading Txns... </div>
   )
 }
