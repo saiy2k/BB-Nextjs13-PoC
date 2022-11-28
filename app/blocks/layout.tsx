@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import BlockRow from './blockrow';
-import styles from './page.module.css';
+import styles from './style.module.css';
 
 export default async function Blocks({
   children,
@@ -12,12 +12,13 @@ export default async function Blocks({
   const blocks = await getData();
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+    <div className='container'>
+      <main className='main'>
+        <h1 className='title'>
           Latest Blocks
         </h1>
-        <div className={styles.content}>
+        <div className='content'>
+
           <div className={styles.table1}>
             <div className={styles.tableRow} style={{ color: '#78838e'}}>
 

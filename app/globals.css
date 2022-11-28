@@ -49,3 +49,32 @@ a {
   color: red;
 }
 
+/**
+ * Component layout styles
+ */
+.container {
+  padding: 0 8rem;
+}
+
+.main {
+  margin: 2rem 0;
+  border-radius: 8px;
+  background: #1D2127;
+  box-shadow: 0 20px 32px 0 rgb(0 0 0 / 8%);
+  padding: 0px;
+}
+
+.title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+

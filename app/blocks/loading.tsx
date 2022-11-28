@@ -1,5 +1,23 @@
 
+import styles from './page.module.css';
 export default function Loading() {
+
+  return (
+    <div className='container'>
+      <main className='main'>
+        <h1 className='title'>
+          Latest Blocks
+        </h1>
+        <div className='content'>
+          Loading...
+        </div>
+
+      </main>
+
+    </div>
+  );
+
+  /*
   return (
     <div style={{
       height: '60vh',
@@ -9,4 +27,6 @@ export default function Loading() {
       alignItems: 'center'
     }}> Loading blocks... </div>
   )
+   */
+
 }

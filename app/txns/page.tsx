@@ -1,8 +1,8 @@
-import styles from './page.module.css'
+// 'use client';
 
 export default function Txns() {
   return (
-    <div className={styles.container}>
+    <div className='container'>
       <h1>Transaction - Under construction</h1>
     </div>
   );
