@@ -1,6 +1,5 @@
 'use client';
 
-import styles from './style.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -18,15 +17,15 @@ export default function TxRow({
 
   return (
     <>
-      <div className={styles.tableRow}>
+      <div style={{ padding: '10px 0px', borderBottom: '1px #2d2f39 solid' }} >
 
-        <div className={styles.cell}>
+        <div style={{ display: 'inline-block' }}>
           <Link href={`/txns`} style={{ color: 'red' }}>
             { tx.txid.substring(0, 30) }...
           </Link>
         </div>
 
-        <div className={styles.cell}>
+        <div style={{ display: 'inline-block' }}>
           { tx.vout.reduce((acc: number, curr: any) => acc + curr.value, 0)  } sats
         </div>
 

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import TxRow from './txrow';
-import styles from './page.module.css'
 
 export default async function BlockDetail({
   params
@@ -13,27 +12,27 @@ export default async function BlockDetail({
 
 
   return (
-    <div className={styles.main}>
-      <h1 className={styles.title}>
+    <div style={{ textAlign: 'left' }}>
+      <h1 style={{ textAlign: 'left',  fontSize: '1.2rem', margin: '0px', padding: '0px' }} >
         Block ID:
       </h1>
       <p style={{ overflowWrap: 'anywhere' }}>
         { params.blockid }
       </p>
 
-      <h1 className={styles.title}>
+      <h1 style={{ textAlign: 'left',  fontSize: '1.2rem', margin: '0px', padding: '0px'}} >
         Transactions: ({block.tx_count < 25? block.tx_count : '25'} of {block.tx_count})
       </h1>
 
-      <div className={styles.content}>
-        <div className={styles.table1}>
-          <div className={styles.tableRow} style={{ color: '#78838e'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between'}} >
+        <div style={{ color: 'white', flex: '1 50%' }}>
+          <div style={{ padding: '20px 30px', borderBottom: '1px #2d2f39 solid', color: '#78838e'}}>
 
-            <div className={styles.cell}>
+            <div style={{display: 'inline-block'}}>
               Tx id
             </div>
 
-            <div className={styles.cell}>
+            <div style={{display: 'inline-block'}}>
               Amount
             </div>
 

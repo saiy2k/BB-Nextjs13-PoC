@@ -27,7 +27,7 @@ export default function BlockRow({
         </div>
 
         <div className={styles.cell}>
-          { new Date(block.timestamp * 1000).toLocaleString() }
+          { new Date(block.timestamp * 1000).toLocaleString('en-IN') }
         </div>
 
         <div className={[styles.cell, styles.button].join(' ')} onClick={(e) => toggleDetail()}>
@@ -38,6 +38,7 @@ export default function BlockRow({
 
       {expand ?
       <table className={styles.tableRow} style={{ 'width': '100%', 'background': '#111316', 'border': '1px solid #2d2f39', 'borderTop': 'none', marginTop: '-15px' }}>
+        <tbody>
         <tr>
           <td> Height </td>
           <td> { block.height } </td>
@@ -68,6 +69,7 @@ export default function BlockRow({
           <td> { block.nonce } </td>
         </tr>
 
+        </tbody>
       </table>: null }
     </>
   );
