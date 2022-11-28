@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import BlockRow from './blockrow';
-import styles from './style.module.css';
 
 export default async function Blocks({
   children,
@@ -19,14 +18,14 @@ export default async function Blocks({
         </h1>
         <div className='content'>
 
-          <div className={styles.table1}>
-            <div className={styles.tableRow} style={{ color: '#78838e'}}>
+          <div style={{ color: 'white', flex: '1 50%' }}>
+            <div style={{ color: '#78838e', padding: '20px 30px', borderBottom: '1px #2d2f39 solid' }}>
 
-              <div className={styles.cell}>
+              <div style={{width: '100px', display: 'inline-block' }}>
                 Height
               </div>
 
-              <div className={styles.cell}>
+              <div style={{width: '200px', display: 'inline-block' }}>
                 Timestamp
               </div>
 
@@ -37,7 +36,7 @@ export default async function Blocks({
             )) }
           </div>
 
-          <div className={styles.table2} style={{ textAlign: 'center', marginTop: '48px' }}>
+          <div style={{  color: 'white', flex: '1 50%', textAlign: 'center', marginTop: '48px' }}>
             { children }
           </div>
 
